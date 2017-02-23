@@ -1,13 +1,6 @@
 # Home Office Digitise, Store & View Prototype
 
-
-
-
-# GOV.UK Prototype kit
-
-## News
-
-**Upgrading from version 1 to 2:** the latest version of the kit (2.0.0 and later) is not compatible with previous versions. If you update your old prototypes you'll need to [convert them as well](https://github.com/alphagov/govuk_prototype_kit/blob/master/docs/updating-the-kit.md).
+This is the prototype for Home Office IDP - Store & View. 
 
 ## About the prototype kit
 
