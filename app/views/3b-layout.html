@@ -1,0 +1,34 @@
+{% extends "govuk_template.html" %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block cookie_message %}
+  <p>{{cookieText | safe }}</p>
+{% endblock %}
+
+{% block proposition_header %}
+<div class="header-proposition">
+  <div class="content">
+    <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+    <nav id="proposition-menu">
+      <a href="/" id="proposition-name">{% if serviceName %} {{ serviceName }} {% endif %}</a>
+      <ul id="proposition-links">
+        <li><a href="3b-search.html">Find documents</a></li>
+        <li><a href="3b-signin.html">Sign out</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block header_class %}
+  with-proposition
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <!-- GOV.UK Prototype kit {{releaseVersion}} -->
+{% endblock %}

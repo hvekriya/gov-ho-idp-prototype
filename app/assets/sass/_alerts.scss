@@ -1,0 +1,90 @@
+// ==========================================================================
+// Alerts
+// ==========================================================================
+
+
+$module: 'alert';
+
+
+%alert {
+  border-left: 4px solid $error-colour;
+	clear: both;
+	margin: 0 0 1.05263em;
+	padding: 1.05263em;
+	
+	> .icon {
+  	float: left;
+    margin-right: 10px;
+    overflow: hidden;
+	}
+	
+}
+
+
+.#{$module} {
+  
+  
+  // Modifiers
+  
+  &-success {
+    @extend %alert;
+    border-color: $turquoise;
+  }
+  
+  
+  &-info {
+    @extend %alert;
+    border-color: $grey-2;
+  }
+  
+  
+  &-error {
+    @extend %alert;
+    border-color: $error-colour;
+  }
+  
+  
+  &-complete {
+    @extend %alert;
+    background-color: $turquoise;
+    border-color: $turquoise;
+    color: $white;
+  }
+  
+  
+  // Blocks
+  
+  &-header {
+    @extend .bold-medium;
+    clear: both;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+  
+  
+  &-number {
+    @extend .bold-xlarge;
+    float: left;
+    margin-right: em(20,48);
+  }
+  
+  
+  &-message {
+    display: block;
+    overflow: hidden;
+    
+    p {
+      margin-top: em(20);
+      margin-bottom: 0;
+    
+      &:first-child {
+        margin-top: 0;
+      }
+    
+    }
+    
+  }
+  
+  
+}
+

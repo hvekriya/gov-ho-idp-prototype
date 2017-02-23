@@ -1,0 +1,66 @@
+
+{% extends "4-layout.html" %}
+
+{% block page_title %}
+Digitise, Store and View
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/4-search">Find documents</a></li>
+      <li><a href="/4-searchresults">View exceptions</a></li>
+      <li><a href="/4-exception-resolve">Resolve exception</a></li>
+    </ol>
+  </div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">Resolve exception</h1>
+      <p class="lede">Enter the case reference to resolve this exception</p>
+      <form action="/4-exceptions-afterresolve" method="get">
+
+        <div id="UAN-questions">
+          <div class="form-group">
+            <label class="form-label" for="documentname">Case reference</label>
+            <input class="form-control" id="documentname" name="documentname" type="text" value="">
+          </div>
+
+          <!-- <p class="form-label">Is this a priority application?</p>
+            <fieldset class="inline">
+
+              <legend class="visuallyhidden">Priority?</legend>
+
+              <label class="block-label" for="radio-priority-1">
+                <input id="radio-priority-1" type="radio" name="radio-priority-group" value="Yes">
+                Yes
+              </label>
+              <label class="block-label" for="radio-priority-2">
+                <input id="radio-priority-2" type="radio" name="radio-priority-group" value="No" >
+                No
+              </label>
+
+            </fieldset>
+ -->
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Resolve">
+        </div>
+        <div class="form-group">
+          <a href="4-exceptions">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

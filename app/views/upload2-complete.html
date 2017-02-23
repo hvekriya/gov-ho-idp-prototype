@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Digitise, Store and View
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">ALPHA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/search2">Search for documents</a></li>
+      <li><a href="/searchresults2-afterupload">Results</a></li>
+      <li><a href="/upload2">Upload a document</a></li>
+    </ol>
+  </div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">Upload complete</h1>
+      <p class="lede">Your document has been uploaded</p>
+      <p><a href="searchresults2-afterupload">Go back to case documents</a> </p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

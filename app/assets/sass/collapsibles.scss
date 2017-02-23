@@ -1,0 +1,294 @@
+// ==========================================================================
+// Collapse
+// ==========================================================================
+
+
+@import 'govuk-elements';
+
+$module: 'collapse';
+
+
+.#{$module} {
+  margin-bottom: 40px;
+
+
+  &-item {
+    border-bottom: 1px solid $grey-2;
+
+    &:first-child {
+      border-top: 1px solid $grey-2;
+    }
+
+  }
+
+
+  &-cell {
+   display: table-cell;
+   vertical-align: middle;
+
+    &:first-child {
+     width: 60%;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+
+  }
+
+
+  &-tag {
+    color: $white;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.25;
+    padding: 2px 5px 0;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+
+    &-agency {
+      background-color: $pink;
+    }
+
+    &-agent {
+      background-color: $fuschia;
+    }
+
+  }
+
+
+  &-heading {
+    display: table;
+    padding: 12px 0;
+    width: 100%;
+  }
+
+
+  &-title {
+    font-weight: 700;
+  }
+
+
+  &-subtitle {
+    @include core-16;
+    clear: both;
+    display: block;
+  }
+
+
+}
+
+
+// JS Enabled
+
+.js-enabled {
+
+  .#{$module} {
+
+    &-title {
+
+      button {
+        background-color: transparent;
+        border: 0 none;
+        cursor: pointer;
+        display: block;
+        font-size: 1em;
+        line-height: 25px;
+        padding: 0 0 0 25px;
+        position: relative;
+        text-align: left;
+
+        &::-moz-focus-inner {
+          border: 0;
+          padding: 0;
+        }
+
+        &:before {
+          content: '►';
+          position: absolute;
+          left: 0;
+        }
+
+        &[aria-expanded=false] {
+          &:before {
+            content: '►';
+          }
+        }
+
+        &[aria-expanded=true] {
+          &:before {
+            content: '▼';
+          }
+        }
+
+      }
+
+    }
+
+    &-content {
+      padding-left: 25px;
+    }
+
+  }
+
+}
+
+
+// ==========================================================================
+// Collapsibles
+// ==========================================================================
+
+
+$module: 'collapsible';
+
+
+.#{$module} {
+  clear: both;
+  margin-bottom: $gutter;
+
+
+  &-heading {
+    margin-top: em(20);
+
+    &-primary {
+      font-weight: bold;
+    }
+
+    &-secondary {
+      // @extend .font-xsmall;
+      // @extend .text-secondary;
+      line-height: 25px;
+
+      @include media(tablet) {
+        float: right;
+      }
+
+    }
+
+  }
+
+
+  // With borders
+
+  &-borders {
+
+    .#{$module}-item {
+      border-bottom: 1px solid $grey-2;
+      padding: 12px 0;
+
+      &:first-child {
+        border-top: 1px solid $grey-2;
+      }
+
+    }
+
+
+  }
+
+
+}
+
+
+
+// JS Enabled
+
+.js-enabled {
+
+  .#{$module} {
+
+    button {
+      background-color: transparent;
+      border: 0 none;
+      cursor: pointer;
+      display: block;
+      font-size: 1em;
+      line-height: 25px;
+      margin: -12px 0;
+      padding: 12px 0;
+      text-align: left;
+      width: 100%;
+
+      &:before {
+        color: $link-colour;
+        margin-right: .35em;
+      }
+
+      &:hover {
+
+        &:before {
+          color: $link-hover-colour;
+        }
+
+        .#{$module}-heading {
+
+          &-primary {
+            color: $link-hover-colour;
+          }
+
+        }
+
+      }
+
+      &[aria-expanded=false] {
+        &:before {
+          content: '►';
+        }
+      }
+
+      &[aria-expanded=true] {
+        &:before {
+          content: '▼';
+        }
+      }
+
+    }
+
+
+    &-heading {
+      margin-top: 0;
+
+      &-primary {
+        color: $link-colour;
+        font-weight: normal;
+        text-decoration: underline;
+      }
+
+    }
+
+
+    &-content {
+      border-left: 4px solid $grey-2;
+      margin-top: em(20);
+      padding-left: em(15);
+    }
+
+
+  }
+
+}
+
+
+// ==========================================================================
+// Toggle
+// ==========================================================================
+
+
+.toggle {
+
+
+  &-content {
+    @extend %contain-floats;
+    @include box-sizing(border-box);
+    float: left;
+    margin-bottom: $gutter-half;
+    width: 100%;
+
+    @include media(tablet) {
+      margin-bottom: $gutter;
+    }
+
+  }
+
+}

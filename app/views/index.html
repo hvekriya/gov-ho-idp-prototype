@@ -1,0 +1,78 @@
+{% extends "layout.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">Document Search Prototype</h1>
+      <p class="lede">Select which version of the Document Search prototype you would like to access</p>
+
+      <h2 class="heading-large">Version 4</h2>
+      <p><a href="4-signin.html">Version 4</a></p>
+      <p>Revised version following usability testing, content review and design review:</p>
+      <ul class="list list-bullet">
+        <li>Went with "Find case" design, but allow users to change the case at the top of the search results</li>
+        <li>Changed Edit to Rename</li>
+        <li>Changed the content on the Upload document part</li>
+        <li>Removed .pdf from the filename</li>
+        <li>Removed the View link and made the document names clickable instead</li>
+        <li>Updated the exception resolution screen to simply ask for a case reference</li>
+        <li>When a document is clicked, it now opens in a new window</li>
+        <li>Updated the filenames to include the date and use underscores (in keeping with the scanning service)</li>
+        <li>For Tier 4: Added Priority column and Fraud column in</li>
+        <li>For Tier 4: Added Decision letter / withdrawal questions to the upload process</li>
+        <li>For Tier 4: Change the default prototype rename and upload document filenames</li>
+        <li>Made h1 size smaller on Resolve, Upload and Rename screens</li>
+        <li>Updated styling and behaviour on the document upload file selector</li>
+      </ul>
+
+      <h2 class="heading-large">Version 3</h2>
+      <p><a href="3b-signin.html">Version 3b</a></p>
+      <p>An alternate design can be found below. The purpose of this is to test a "case lookup" design pattern rather than a "search" pattern. It also experiments with displaying success messages within the page content rather than at the top of the screen.</p>
+      <p><a href="3-signin.html">Version 3</a></p>
+      <p>Revised version following usability testing:</p>
+      <ul class="list list-bullet">
+        <li>Removed Priority and Fraud flags.</li>
+        <li>Updated the document edit page to capture a more structured set of data.</li>
+        <li>Added a success message, for after a document is edited</li>
+        <li>Updated the success message after a document upload to play back the filename</li>
+        <li>Updated the resolution of exceptions to include a success message</li>
+        <li>Updated the "Date" label to be Receipt Date</li>
+        <li>Updated the upload screen to remove the case reference field</li>
+        <li>Updated the document type hint text on the upload and edit screen - to prompt for "e.g. Correspondence" rather than "e.g. Grant Letter"</li>
+        <li>Updated all pages to use the BETA banner rather than ALPHA</li>
+        <li>Updated the field labels on the signin page to be "Username" rather than "Enter your username" - to be consistent with the real system.</li>
+        <li>Standardised the "reference number" and "case reference number" language to be "case reference".</li>
+      </ul>
+
+      <h2 class="heading-large">Version 2</h2>
+      <p><a href="signin2.html">Version 2</a></p>
+      <p>Revised version following usability testing</p>
+      <ul class="list list-bullet">
+        <li>Added a sign-in page to test</li>
+        <li>Updated the copy on the search page to make it less UKVI specific</li>
+        <li>Updated the page title on the search results screen to be more explicit that the results relate to a case</li>
+        <li>Added Fraud column to the documents list </li>
+        <li>Added Priority column to the documents list </li>
+        <li>Added a document upload process</li>
+        <li>Added a document edit journey</li>
+        <li>Added an exceptions journey</li>
+        <li>Renamed the application to Digitise, Store and View</li>
+      </ul>
+
+      <h2 class="heading-large">Version 1</h2>
+      <p><a href="search.html">Version 1</a></p>
+      <p>Initial version of the document search prototype</p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
