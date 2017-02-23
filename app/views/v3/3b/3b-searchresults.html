@@ -1,0 +1,99 @@
+{% extends "../../layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="3b-search">Find documents</a></li>
+      <li><a href="3b-searchresults">Documents for case</a></li>
+    </ol>
+  </div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <!-- <h1 class="heading-xlarge">Search results</h1> -->
+      <!-- <p class="lede">Find documents related to a case</p> -->
+
+
+      <h1 class="heading-large">
+        <span class="heading-secondary">Documents for case</span>
+        1234-1234-1234-1234</h1>
+
+        <p>5 documents found</p>
+
+        </div>
+        <div class="search-results">
+
+          <table>
+            <caption class="visuallyhidden">Caption to identify a table</caption>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th class="numeric" scope="col">Receipt Date</th>
+                <th class="numeric" scope="col">Edit</th>
+                <th class="numeric" scope="col">View</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1234-1234-1234-1234-APPLICATION-1.pdf</td>
+                <td class="numeric">01/07/2016</td>
+                <td class="numeric"><a href="3b-editdocument">Edit</a></td>
+                <td class="numeric"><a href="../public/images/coversheet.pdf">View</a></td>
+              </tr>
+              <tr>
+                <td>1234-1234-1234-1234-ID-TRAVEL-2.pdf</td>
+                <td class="numeric">01/07/2016</td>
+                <td class="numeric"><a href="3b-editdocument">Edit</a></td>
+                <td class="numeric"><a href="../public/images/brp.pdf">View</a></td>
+              </tr><tr>
+                <td>1234-1234-1234-1234-FINANCES-3.pdf</td>
+                <td class="numeric">01/07/2016</td>
+                <td class="numeric"><a href="3b-editdocument">Edit</a></td>
+                <td class="numeric"><a href="../public/images/finances.pdf">View</a></td>
+              </tr><tr>
+                <td>1234-1234-1234-1234-ID-TRAVEL-4.pdf</td>
+                <td class="numeric">01/07/2016</td>
+                <td class="numeric"><a href="3b-editdocument">Edit</a></td>
+                <td class="numeric"><a href="../public/images/passport.pdf">View</a></td>
+              </tr>
+              <tr>
+                <td>1234-1234-1234-1234-EDUCATION-5.pdf</td>
+                <td class="numeric">01/07/2016</td>
+                <td class="numeric"><a href="3b-editdocument">Edit</a></td>
+                <td class="numeric"><a href="../public/images/education.pdf">View</a></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h2 class="heading-medium">Upload a document</h2>
+        <p>Upload a document to this case.</p>
+        <p><a href="3b-upload.html">Upload a document</a></p>
+      </div>
+    </div>
+
+    <h2 class="heading-medium">Find another case</h2>
+    <form id="searchform" action="3b-searchresults" method="get">
+    <div class="form-group">
+      <label class="form-label" for="caseref">Case reference</label>
+      <input class="form-control" id="caseref" name="caseref" type="text" value="1234-1234-1234-1234">
+    </div>
+
+    <div >
+      <input class="button" type="submit" value="Find">
+    </div>
+    </form>
+
+  </main>
+
+  {% endblock %}
