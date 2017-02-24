@@ -2,13 +2,12 @@
 // Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
 $path: "/public/images/";
 @import 'govuk-elements';
-
 // Take a look at in app/assets/sass/patterns/ to see which files are imported.
 @import 'patterns/check-your-answers';
 // @import 'patterns/unbranded';
-
 @import 'collapsibles';
-
+@import '_alerts';
+@import '_icons';
 
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
@@ -28,15 +27,12 @@ $path: "/public/images/";
   }
 }
 
-
-
 // Added for IDP
 
 .search {
   position: relative;
   margin: 0;
 }
-
 
 .search-input {
   width: 100%;
@@ -159,10 +155,23 @@ label.custom-file-upload {
   width: 1em;
 }
 
+.tag {
+  display: inline-block;
+  padding: 3px 5px 1px;
+}
+
+.priority-high {
+  background-color: #b10e1e;
+  color: #fff;
+}
+.priority-medium {
+  background-color: #2b8cc4;
+  color: #fff;
+}
+.priority-low {
+  background-color: #00823b;
+  color: #fff;
+}
+
 
 // End of custom file upload styles
-
-
-
-@import '_alerts';
-@import '_icons';
