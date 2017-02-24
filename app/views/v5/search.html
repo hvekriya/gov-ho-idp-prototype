@@ -1,0 +1,68 @@
+{% extends "../layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+  <div class="breadcrumbs">
+  <ol>
+    <li><a href="search">Find documents</a></li>
+  </ol>
+</div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">Find documents</h1>
+      <!-- <p class="lede">Find and view documents stored within the Digitise, Store &amp; View service.</p> -->
+
+      <h2 class="heading-medium">Case documents</h2>
+      <p>Find a case using a case reference number. For Access UK cases, use the Unique Application Number (UAN).</p>
+      <div class="collapsible">
+        <div class="collapsible-item">
+          <div class="collapsible-heading">
+            <p>
+              <span class="collapsible-heading-primary">How to find the Unique Application Number (UAN)</span>
+            </p>
+          </div>
+
+          <div class="collapsible-content">
+            <p>The Unique Application Number is automatically assigned to a case when an applicant applies through GOV.UK. The Unique Application Number is shown when you view the case in the Casework Information Database (CID).</p>
+          </div>
+
+        </div>
+
+      </div>
+      <form id="searchform" action="searchresults" method="get">
+
+
+        <div class="form-group">
+          <label class="form-label" for="caseref">Case reference</label>
+          <input class="form-control" id="caseref" name="caseref" type="text">
+        </div>
+
+        <div >
+          <input class="button" type="submit" value="Find">
+        </div>
+        <!-- <div class="search">
+          <input type="search-input" name="q" class="search-input" placeholder="e.g. 1234-1234-1234-1234" id="search-input" aria-label="Enter a case reference" />
+          <input type="submit" value="Search" class="search-button" />
+        </div> -->
+      </form>
+
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h2 class="heading-medium">Exceptions</h2>
+          <p>View a list of documents that were received without a case reference. </p>
+          <p><a href="exceptions.html">View exceptions</a></p>
+        </div>
+      </div>
+
+  </div>
+</main>
+
+{% endblock %}

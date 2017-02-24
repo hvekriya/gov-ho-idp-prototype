@@ -1,0 +1,159 @@
+{% extends "../layout.html" %}
+
+{% block content %}
+
+<script>
+    function handleDecisionLetterClick(){
+      var ddl = document.getElementById('select-box');
+      var strDept = ddl.options[ddl.selectedIndex].text;
+      if(strDept.indexOf("IE Civil Penalties") > -1)
+      {
+        document.getElementById('withdraw').style.display = 'none';
+      }
+    }
+</script>
+
+<main id="content" role="main">
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/4-search">Find documents</a></li>
+      <li><a href="/4-searchresults">Documents for case</a></li>
+      <li><a href="/4-upload">Upload a document</a></li>
+    </ol>
+  </div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">Upload a document</h1>
+
+      <p class="lede">Add a file to case '1234-1234-1234-1234'</p>
+
+      <form action="/4-searchresults-afterupload" method="get">
+
+        <div class="form-group" id="file-choose">
+        <label class="custom-file-upload">
+                <input type="file" id="file-input" onchange="showToggledContent($('#file-show'),$('#file-show')); hideToggledContent($('#file-choose'),$('#file-choose'));">
+                Choose file
+        </label>
+
+        </div>
+
+        <div class="grid-row js-hidden toggle-content" id="file-show">
+            <div class="column-two-thirds">
+<span class="text-success"></span><span class="strong" id="filename">letter.pdf</span>
+        </div>
+        <div class="column-one-third">
+          <a href="" onclick="hideToggledContent($('#file-show'),$('#file-show')); showToggledContent($('#file-choose'),$('#file-choose'));">Remove</a>
+        </div>
+        </div>
+
+<!--
+        <div class="form-group">
+          <label class="form-label" for="select-box">Workstream</label>
+          <select class="form-control" id="select-box" onchange="handleDecisionLetterClick();">
+            <option>UKVI Tier 4 Student Visas</option>
+            <option>UKVI No-Time-Limit</option>
+            <option>IE Civil Penalties</option>
+          </select>
+        </div> -->
+
+        <div class="form-group">
+          <label class="form-label" for="doctype">Type of document</label>
+          <input class="form-control" id="doctype" name="doctype" type="text" placeholder="e.g. Refusal" >
+        </div>
+
+        <div class="form-group">
+
+          <p class="form-label">Is this document a decision letter?</p>
+          <fieldset class="inline">
+
+            <legend class="visuallyhidden">Is this document a decision letter?</legend>
+
+            <label class="block-label selection-button-radio" for="radio-inline-1"  data-target="withdraw">
+              <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes" onchange="handleDecisionLetterClick();">
+              Yes
+            </label>
+            <label class="block-label  selection-button-radio" for="radio-inline-2">
+              <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No" onchange="handleDecisionLetterClick();">
+              No
+            </label>
+
+          </fieldset>
+        </div>
+
+        <div class="js-hidden" id="withdraw">
+          <div class="form-group">
+            <p class="form-label">Withhold the customer's travel documents?</p>
+            <fieldset class="inline">
+
+              <legend class="visuallyhidden">Withhold the customer's travel documents?</legend>
+
+              <label class="block-label selection-button-radio" for="radio-inline-3" >
+                <input id="radio-inline-3" type="radio" name="radio-inline-group-2" value="Yes" >
+                Yes
+              </label>
+              <label class="block-label  selection-button-radio" for="radio-inline-4">
+                <input id="radio-inline-4" type="radio" name="radio-inline-group-2" value="No">
+                No
+              </label>
+
+            </fieldset>
+          </div>
+        </div>
+
+       <!-- <div class="form-group">
+
+        <p class="form-label">Is this a decision letter?</p>
+        <fieldset class="inline">
+
+          <legend class="visuallyhidden">Is this a decision letter</legend>
+
+          <label class="block-label" for="radio-inline-1"  data-target="withdraw">
+            <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes" onchange="handleDecisionLetterClick();">
+            Yes
+          </label>
+          <label class="block-label" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No" onchange="handleDecisionLetterClick();">
+            No
+          </label>
+
+        </fieldset>
+      </div>
+
+      <div class="form-group js-hidden" id="withdraw">
+
+       <p class="form-label">Withhold the customer's travel documents?</p>
+       <fieldset class="inline">
+
+         <legend class="visuallyhidden">Withhold the customer's travel documents?</legend>
+
+         <label class="block-label" for="radio-inline-3">
+           <input id="radio-inline-3" type="radio" name="radio-inline-group-2" value="Yes">
+           Yes
+         </label>
+         <label class="block-label" for="radio-inline-4">
+           <input id="radio-inline-4" type="radio" name="radio-inline-group-2" value="No">
+           No
+         </label>
+
+       </fieldset>
+     </div> -->
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Finish">
+        </div>
+        <div class="form-group">
+          <a href="searchresults">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
