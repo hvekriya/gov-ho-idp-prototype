@@ -18,9 +18,9 @@
     <div class="column-two-thirds">
 
       <h1 class="heading-large">Manage document</h1>
-      <p class="lede">Change the details of this document</p>
       <form action="searchresults-afteredit" method="get">
 
+        <h2 class="heading-medium">Change the details of this document</h2>
         <div class="form-group">
           <label class="form-label" for="doctype">Type of document</label>
           <input class="form-control" id="doctype" name="doctype" type="text" placeholder="e.g. Correspondence" value="APPLICATION">
@@ -31,6 +31,10 @@
           <input class="form-control" id="caseref" name="caseref" type="text" value="1234-1234-1234-1234">
         </div>
 
+        <h2 class="heading-medium">Delete this document permanently</h2>
+        <div class="form-group">
+          <a href="editdocument-afterdelete.html">Delete this document</a>
+        </div>
 
         <div class="form-group">
           <input class="button" type="submit" value="Save">
@@ -38,6 +42,7 @@
         <div class="form-group">
           <a href="searchresults">Cancel</a>
         </div>
+
       </form>
     </div>
   </div>
